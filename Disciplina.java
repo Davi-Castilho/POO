@@ -2,25 +2,25 @@ package Negócio;
 
 import java.util.Collection;
 
-import Persistência.AutorDAO;
+import Persistencia.DisciplinaDAO;
 
-public class Autor {
+public class Disciplina {
 // propriedades da classe
 	private int id = 0;
 	private String nome = "";
 
-// métodos construtores da classe
-	public Autor() {
+	// métodos construtores da classe
+	public Disciplina() {
 		super();
 	}
 
-	public Autor(int id, String nome) {
+	public Disciplina(int id, String nome) {
 		super();
 		this.id = id;
 		this.nome = nome;
-		// métodos de acesso da classe
 	}
 
+	// métodos de acesso da classe
 	public int getId() {
 		return id;
 	}
@@ -38,7 +38,7 @@ public class Autor {
 	}
 
 	// métodos da classe
-	public static Collection<Autor> getTodos() throws Exception {
-		return new AutorDAO().getTodos();
+	public static Collection<Disciplina> getTodos() throws Exception {
+		return new DisciplinaDAO().getTodos();
 	}
 }
